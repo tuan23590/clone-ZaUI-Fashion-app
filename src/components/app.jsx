@@ -35,5 +35,4 @@ function MyApp() {
   }, []);
   return <RouterProvider router={router} />;
 }
-
 export default MyApp;

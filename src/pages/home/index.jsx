@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import HorizontalDivider from "../../components/horizontal-divider";
 import Banners from "./banners";
 import SearchBar from "../../components/search-bar";
@@ -9,12 +9,6 @@ import FlashSales from "./flash-sales";
 
 export default function HomePage() {
   const navigate = useNavigate();
-  const location = useLocation();
-  useEffect(() => {
-    if (location.pathname.includes("zapps")) {
-      navigate("/", { replace: true });
-    }
-  }, []);
   return (
     <>
    <div className="min-h-full bg-section">

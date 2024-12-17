@@ -21,13 +21,6 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "/zapps/:id",
-        element: <HomePage />,
-        handle: {
-          logo: true,
-        },
-      },
-      {
         path: "/categories",
         element: <CategoryListPage />,
         handle: {
@@ -73,5 +66,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+],
+{basename: window.APP_ID === undefined ? "/" : `/zapps/${window.APP_ID}`}
+);
 export default router;
