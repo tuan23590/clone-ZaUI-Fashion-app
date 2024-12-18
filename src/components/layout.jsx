@@ -13,23 +13,18 @@ export default function Layout() {
   const [loading, _] = useProductsStore.loading();
   return (
     <Wrapper>
+      
       <Header />
       <WrapperContent>{loading ? <PageSkeleton /> : <Outlet />}</WrapperContent>
       <Footer />
       <Toaster
         containerClassName="toast-container"
-        containerStyle={toastContainerStyle}
       />
       <ScrollRestoration />
     </Wrapper>
   );
 }
 
-const toastContainerStyle = () => {
-  return {
-    top: "calc(50% - 24px)",
-  };
-};
 
 const Wrapper = styled.div`
   width: 100vw;
